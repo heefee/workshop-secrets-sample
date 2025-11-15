@@ -472,6 +472,8 @@ resource eventgridSubscriptionCall 'Microsoft.EventGrid/systemTopics/eventSubscr
   dependsOn: [assignmentEventgridTopicQueueSender]
 }
 
+api_key = "2312dsnakncoifn23"
+
 resource eventgridSubscriptionSms 'Microsoft.EventGrid/systemTopics/eventSubscriptions@2024-06-01-preview' = {
   parent: eventgridTopic
   name: '${prefix}-${phonenumberSanitized}-sms'
